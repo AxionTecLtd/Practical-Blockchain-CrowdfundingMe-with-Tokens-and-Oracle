@@ -39,6 +39,8 @@ This project illustrates **end-to-end crowdfunding lifecycle**:
 ---
 
 ## 🔄 Crowdfunding Lifecycle | 众筹生命周期
+---
+
 
 ```mermaid
 flowchart TD
@@ -52,7 +54,8 @@ flowchart TD
 
     F --> G["Investors can claim ERC20 reward tokens (FTK)"]
     G --> H["Tokens can be transferred or burned"]
-``
+```
+
 
 ---
 
