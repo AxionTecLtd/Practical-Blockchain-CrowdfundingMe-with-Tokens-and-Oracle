@@ -39,23 +39,20 @@ This project illustrates **end-to-end crowdfunding lifecycle**:
 ---
 
 ## 🔄 Crowdfunding Lifecycle | 众筹生命周期
----
-
-### Crowdfunding Lifecycle (English)
 
 ```mermaid
 flowchart TD
-    A[Investor funds ETH] --> B{Check minimum USD}
-    B -- Not enough --> A
-    B -- Enough --> C[Funds deposited to FundMe contract]
+    A["Investor funds ETH"] --> B{"Check minimum USD"}
+    B -->|Not enough| A
+    B -->|Enough| C["Funds deposited to FundMe contract"]
 
-    C --> D{Funding goal reached?}
-    D -- No --> E[After lock period, investors can withdraw]
-    D -- Yes --> F[After lock period, project owner withdraws]
+    C --> D{"Funding goal reached?"}
+    D -->|No| E["After lock period, investors can withdraw"]
+    D -->|Yes| F["After lock period, project owner withdraws"]
 
-    F --> G[Investors can claim ERC20 reward tokens (FTK)]
-    G --> H[Tokens can be transferred or burned]
-```
+    F --> G["Investors can claim ERC20 reward tokens (FTK)"]
+    G --> H["Tokens can be transferred or burned"]
+``
 
 ---
 
