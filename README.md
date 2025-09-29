@@ -42,16 +42,17 @@ This project illustrates **end-to-end crowdfunding lifecycle**:
 
 ```mermaid
 flowchart TD
-    A[投资人出资 ETH] --> B{检查最低金额 (USD)}
-    B -- 不满足 --> A
-    B -- 满足 --> C[资金存入合约 FundMe]
+    A[Investor funds ETH \n 投资人出资 ETH] --> B{Check minimum amount (USD) \n 检查最低金额 (USD)}
+    B -- Not enough \n 不满足 --> A
+    B -- Enough \n 满足 --> C[Funds deposited to FundMe contract \n 资金存入合约 FundMe]
 
-    C --> D{是否达到目标?}
-    D -- 否 --> E[锁定期结束后<br>投资人可退款]
-    D -- 是 --> F[锁定期结束后<br>项目方提款]
+    C --> D{Funding goal reached? \n 是否达到目标?}
+    D -- No \n 否 --> E[After lock period, investors can withdraw \n 锁定期结束后投资人可退款]
+    D -- Yes \n 是 --> F[After lock period, project owner withdraws \n 锁定期结束后项目方提款]
 
-    F --> G[投资人可领取 ERC20 奖励通证 FTK]
-    G --> H[通证可转账或销毁<br>(兑换权益)]
+    F --> G[Investors can claim ERC20 reward tokens (FTK) \n 投资人可领取 ERC20 奖励通证 FTK]
+    G --> H[Tokens can be transferred or burned \n 通证可转账或销毁 (兑换权益)]
+
 ```
 
 ---
