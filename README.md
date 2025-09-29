@@ -39,21 +39,40 @@ This project illustrates **end-to-end crowdfunding lifecycle**:
 ---
 
 ## 🔄 Crowdfunding Lifecycle | 众筹生命周期
+---
+
+### Crowdfunding Lifecycle (English)
 
 ```mermaid
 flowchart TD
-    A[Investor funds ETH / 投资人出资 ETH] --> B{Check minimum USD / 检查最低金额 USD}
-    B -- Not enough / 不满足 --> A
-    B -- Enough / 满足 --> C[Funds deposited to FundMe / 资金存入合约 FundMe]
+    A[Investor funds ETH] --> B{Check minimum USD}
+    B -- Not enough --> A
+    B -- Enough --> C[Funds deposited to FundMe contract]
 
-    C --> D{Funding goal reached? / 是否达到目标?}
-    D -- No / 否 --> E[After lock period, investors withdraw / 锁定期结束后投资人可退款]
-    D -- Yes / 是 --> F[After lock period, owner withdraws / 锁定期结束后项目方提款]
+    C --> D{Funding goal reached?}
+    D -- No --> E[After lock period, investors can withdraw]
+    D -- Yes --> F[After lock period, project owner withdraws]
 
-    F --> G[Investors claim ERC20 tokens FTK / 投资人领取奖励通证 FTK]
-    G --> H[Tokens can be transferred or burned / 通证可转账或销毁]
+    F --> G[Investors can claim ERC20 reward tokens (FTK)]
+    G --> H[Tokens can be transferred or burned]
+```
 
+---
 
+### 众筹生命周期 (中文)
+
+```mermaid
+flowchart TD
+    A[投资人出资 ETH] --> B{检查最低金额 USD}
+    B -- 不满足 --> A
+    B -- 满足 --> C[资金存入合约 FundMe]
+
+    C --> D{是否达到目标?}
+    D -- 否 --> E[锁定期结束后，投资人可退款]
+    D -- 是 --> F[锁定期结束后，项目方提款]
+
+    F --> G[投资人可领取 ERC20 奖励通证 FTK]
+    G --> H[通证可转账或销毁]
 ```
 
 ---
