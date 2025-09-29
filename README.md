@@ -40,7 +40,8 @@ This project illustrates **end-to-end crowdfunding lifecycle**:
 
 ## 🔄 Crowdfunding Lifecycle | 众筹生命周期
 
-`flowchart TD
+```mermaid
+flowchart TD
     A[Investor funds ETH / 投资人出资 ETH] --> B{Check minimum USD / 检查最低金额 USD}
     B -- Not enough / 不满足 --> A
     B -- Enough / 满足 --> C[Funds deposited to FundMe / 资金存入合约 FundMe]
