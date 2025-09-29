@@ -66,7 +66,7 @@ flowchart TD
 * **G → H**：众筹成功后，投资人可领取奖励代币 FTK，用于转账或兑换权益并销毁。
 
 ---
-## 📂 Project Structure | 项目目录结构
+## 📂 Project Structure | 参考项目目录结构（部分需要自建）
 
 ```bash
 blockchain-crowdfunding/
